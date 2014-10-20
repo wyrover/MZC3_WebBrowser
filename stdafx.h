@@ -1,24 +1,12 @@
 ////////////////////////////////////////////////////////////////////////////
 
 #include <windows.h>
+#include <windowsx.h>
 #include <commctrl.h>
 
 #include <cassert>
 #include <cstring>
 #include <locale>
-
-////////////////////////////////////////////////////////////////////////////
-// MzcGetLParamX, MzcGetLParamY
-
-inline int MzcGetLParamX(LPARAM lParam)
-{
-    return static_cast<int>(static_cast<short>(LOWORD(lParam)));
-}
-
-inline int MzcGetLParamY(LPARAM lParam)
-{
-    return static_cast<int>(static_cast<short>(HIWORD(lParam)));
-}
 
 ////////////////////////////////////////////////////////////////////////////
 

@@ -16,7 +16,7 @@ MZC_INLINE MPoint::MPoint(SIZE siz)
     { *reinterpret_cast<SIZE *>(this) = siz; }
 
 MZC_INLINE MPoint::MPoint(DWORD dwPoint)
-    { x = MzcGetLParamX(dwPoint); y = MzcGetLParamY(dwPoint); }
+    { x = GET_X_LPARAM(dwPoint); y = GET_Y_LPARAM(dwPoint); }
 
 MZC_INLINE void MPoint::Offset(int dx, int dy)
     { x += dx; y += dy; }
@@ -90,7 +90,7 @@ MZC_INLINE MSize::MSize(POINT pt)
     { *reinterpret_cast<POINT *>(this) = pt; }
 
 MZC_INLINE MSize::MSize(DWORD dwSize)
-    { cx = MzcGetLParamX(dwSize); cy = MzcGetLParamY(dwSize); }
+    { cx = GET_X_LPARAM(dwSize); cy = GET_Y_LPARAM(dwSize); }
 
 MZC_INLINE MSize::operator LPSIZE()
     { return reinterpret_cast<LPSIZE>(this); }
